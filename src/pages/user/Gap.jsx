@@ -1,8 +1,11 @@
 import React from 'react'
+import GapHeader from '../../components/user/gap/GapHeader'
 
 function Gap() {
   return (
-    <div>Gap</div>
+    <div>
+        <GapHeader />
+    </div>
   )
 }
 
