@@ -54,9 +54,36 @@
   padding: 2rem;
   width: 33rem;
   margin: auto;
-  border-radius: 10px ;
-  background: rgba(255, 255, 255, 0.537);
+  border-radius: 14px ;
+  background: rgb(36, 1, 93);
+  color: white;
+  overflow: hidden;
+  box-shadow: 0px 8px 20px 4px rgb(222 222 222);
 
+}
+.bg_card_color{
+  width: 20vw;
+  height: 20vh;
+  background: rgb(255, 28, 7);
+  background: linear-gradient(40, rgb(255, 131, 6) 10%, rgb(83, 0, 167) 80%);
+  border-radius: 100%;
+  left: 55%;
+  top: 5rem;
+  margin-top: -5rem;
+  filter:blur(120px);
+  position: absolute;
+}
+.bg_card_color2{
+  width: 20vw;
+  height: 20vh;
+  background: rgb(15, 0, 103);
+  background: linear-gradient(30, rgb(197, 0, 128) 10%, rgb(203, 108, 0) 80%);
+  border-radius: 100%;
+  left: -10%;
+  top: 5rem;
+  margin-top: -5rem;
+  filter:blur(120px);
+  position: absolute;
 }
 .auth_image{
   margin-left: 0px;

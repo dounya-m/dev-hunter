@@ -1,6 +1,22 @@
 import React  from 'react'
+import { useState } from 'react'
 import {Link} from 'react-router-dom'
+// import axios from 'axios'
 function RegisterForme() {
+
+    const [name, setName] = useState('')
+    const [lastname, setLastname] =  useState('')
+    const [email, setEmail] = useState('')
+    const [adress, setAdress] = useState('')
+    const [city, setCity] = useState('')
+    const [codeP, setCodeP] = useState('')
+    const [password, setPassword] = useState('')
+
+    const [submit, setSubmit] = useState(false)
+    const [error, setError] = useState(false)
+
+
+
 return (
     <div className='grid grid-cols-2 gap-6 capitalize'>
         <div class="space-y-1">
