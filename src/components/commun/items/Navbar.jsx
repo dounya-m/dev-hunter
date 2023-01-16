@@ -16,8 +16,8 @@ function Navbar() {
             </ul>
         </div>
         <div className='flex gap-[2rem]'>
-        <button>Login</button>
-        <button className='text-white bg-violet-500 px-3 py-2 rounded-lg hover:bg-violet-700'>Sign up</button>
+        <button><NavLink to='/login'>Login</NavLink></button>
+        <button className='text-white bg-violet-500 px-3 py-2 rounded-lg hover:bg-violet-700'><NavLink to='register'>Sign up</NavLink></button>
         </div>
     </div>
   )
