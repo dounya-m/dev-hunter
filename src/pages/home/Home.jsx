@@ -4,7 +4,7 @@ import MainHome from '../../components/home/MainHome'
 
 function Home() {
   return (
-    <div>
+    <div className='w-[70%] m-auto'>
       <HeaderHome />
       <MainHome />
     </div>

@@ -1,1 +1,1 @@
-export const proxy = 'http://localhost:3000/api/banka'
+export const Proxy = 'http://localhost:3000/api/banka'

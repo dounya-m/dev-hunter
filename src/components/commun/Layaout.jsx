@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './items/Navbar'
+import Footer from './items/Footer'
 
 function Layaout({children}) {
   return (
@@ -10,6 +11,9 @@ function Layaout({children}) {
         <div>
             <article>{children}</article>
         </div>
+        <footer>
+          <Footer />
+        </footer>
     </main>
   )
 }
