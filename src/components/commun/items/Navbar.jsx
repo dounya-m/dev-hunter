@@ -1,7 +1,15 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink , useNavigate} from 'react-router-dom'
 
 function Navbar() {
+  const token = localStorage.getItem('token')
+  const navigate = useNavigate()
+
+  const logout = () => {
+      window.localStorage.clear()
+      navigate('/login')
+  }
+
   return (
     <div className='flex justify-between items-center px-8 py-4'>
         <div className='relative'>
@@ -15,10 +23,16 @@ function Navbar() {
               <NavLink to='/' className='text-gray-600 hover:text-violet-800 font-semibold'>Contact</NavLink>
             </ul>
         </div>
-        <div className='flex gap-[2rem]'>
-        <button><NavLink to='/login'>Login</NavLink></button>
-        <button className='text-white bg-violet-500 px-3 py-2 rounded-lg hover:bg-violet-700'><NavLink to='register'>Sign up</NavLink></button>
-        </div>
+                { !token?
+                  <div className='flex gap-[2rem]' >
+                  <button><NavLink to='/login'>Login</NavLink></button>
+                  <button className='text-white bg-violet-500 px-3 py-2 rounded-lg hover:bg-violet-700'><NavLink to='register'>Sign up</NavLink></button>
+                  </div>
+                  :
+                  <div className='flex gap-[2rem]'>
+                  <button onClick={token ?  logout : 'null'} className='text-white bg-violet-500 px-3 py-2 rounded-lg hover:bg-violet-700'><NavLink to='register'>Logout</NavLink></button>
+                  </div>
+                  }
     </div>
   )
 }

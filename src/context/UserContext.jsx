@@ -10,10 +10,9 @@ export const UserProvider = ({children}) => {
     const  userId = localStorage.getItem('token')
     useEffect(() => {
         async function fetchData() {
-            axios.get(`${Proxy}/user/oneUser/${userId}`)
+            const response = axios.get(`${Proxy}/user/oneUser/${userId}`)
             .then(response => {
                 setUser(response.data);
-                console.log(response.data);
             }).catch(error => {
                 console.log(error);
             });
